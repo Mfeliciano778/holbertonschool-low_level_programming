@@ -1,0 +1,7 @@
+[user]
+	name = Mfeliciano778
+	email = 1652@holbertonschool.com
+[credential]
+	helper = store
+[push]
+	default = simple
