@@ -10,13 +10,16 @@ int main(void)
 {
 	char let1;
 
-	let1="a";
+	let1 = 'a';
 
-	while (let1 <= "z", let1 != "q" && let1 != "e")
+	while (let1 <= 'z')
 	{
-		putchar(let1);
-		let1++;
+		if (let1 != 'q' && let1 != 'e')
+	{
+			putchar(let1);
+			let1++;
 	}
-	putchar("\n"); 
+	}
+	putchar('\n');
 	return (0);
 }
