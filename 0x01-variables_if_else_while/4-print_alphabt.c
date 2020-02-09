@@ -5,7 +5,7 @@
  * followed by a new line
  *
  *
- * Return: Always 0 (success)
+ * Return: 0
  */
 int main(void)
 {
@@ -17,8 +17,8 @@ int main(void)
 	{
 		if (let1 != 'q' && let1 != 'e')
 	{
+			putchar(let1);
 	}
-		putchar(let1);
 		let1++;
 	}
 	putchar('\n');
