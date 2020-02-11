@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - program checks to see if
+ * _isalpha - program checks to see if
  * c is alphabetic character
  *
  * @c: character we are testing
@@ -15,9 +15,9 @@ int _isalpha(int c)
 	{
 		return (1);
 	}
-        if (c <= 'z' && c >= 'a')
-        {
-                return (1);
-        }
-        return (0);
+	if (c <= 'z' && c >= 'a')
+	{
+		return (1);
+	}
+	return (0);
 }
