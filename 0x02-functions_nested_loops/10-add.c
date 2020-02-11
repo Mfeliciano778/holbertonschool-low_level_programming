@@ -1,13 +1,12 @@
-nclude <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "holberton.h"
 /**
- * _abs - function that computes the absolute value of an integer
+ * _add - function that computes the sum of two integers
+ * @a: integer one
+ * @b: integer two
  *
- * @num: variable used to pass numbers into it
- *
- *
- * Return: 0
+ * Return: the sum of two integers (a and b)
  */
 
 int _add(int a + int b)
