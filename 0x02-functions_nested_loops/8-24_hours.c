@@ -25,12 +25,12 @@ void jack_bauer(void)
 				{
 					if (num <= '2' && num2 <= '3')
 					{
-					putchar(num);
-					putchar(num2);
-					putchar(':');
-					putchar(num3);
-					putchar(num4);
-					putchar('\n');
+					_putchar(num);
+					_putchar(num2);
+					_putchar(':');
+					_putchar(num3);
+					_putchar(num4);
+					_putchar('\n');
 					}
 					else
 						break;	
