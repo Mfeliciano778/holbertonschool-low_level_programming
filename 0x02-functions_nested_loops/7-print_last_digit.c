@@ -2,17 +2,20 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - program that prints the last
+ * print_last_digit - program that prints the last
  * digit of a number
  *
- * @c: character we are testing
+ * @num: character we are testing
  *
  * Return: 0
  */
-int print_last_digit(int)
+int print_last_digit(int num)
 {
-	int num;
+	int d = num % 10;
 
-	(num %10);	
-	return (num);
+	if (d < 0)
+		d *= -1;
+
+	_putchar(d +  '0');
+	return (d);
 }
