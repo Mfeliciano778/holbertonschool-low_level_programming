@@ -17,20 +17,23 @@ void jack_bauer(void)
 
 		for (num2 = '0'; num2 <= '9'; num2++)
 		{
-	if (num >= '2' && num2 >= '4')
-	break;
 
 			for (num3 = '0'; num3 <= '5'; num3++)
 			{
 
 				for (num4 = '0'; num4 <= '9'; num4++)
 				{
+					if (num <= '2' && num2 <= '3')
+					{
 					putchar(num);
 					putchar(num2);
 					putchar(':');
 					putchar(num3);
 					putchar(num4);
 					putchar('\n');
+					}
+					else
+						break;	
 				}
 			}
 		}
