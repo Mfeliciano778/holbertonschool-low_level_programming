@@ -9,9 +9,10 @@
  * Return: the sum of two integers (a and b)
  */
 
-int _add(int a , int b)
+int _add(inta, intb)
 {
-	int sum = a + b;
+	inta
+	int sum = inta + intb;
 
 	return (sum);
 }
