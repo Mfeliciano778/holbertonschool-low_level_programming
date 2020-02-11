@@ -10,21 +10,15 @@
 
 void jack_bauer(void)
 {
-	int num;
-
-	int num2;
-
-	int num3;
-
-	int num4;
+	int num, num2, num3, num4;
 
 	for (num = '0'; num <= '2'; num++)
 	{
 
 		for (num2 = '0'; num2 <= '9'; num2++)
 		{
-			if (num >= '2' && num2 >= '4')
-				break;
+	if (num >= '2' && num2 >= '4')
+	break;
 
 			for (num3 = '0'; num3 <= '5'; num3++)
 			{
@@ -38,7 +32,7 @@ void jack_bauer(void)
 					putchar(num4);
 					putchar('\n');
 				}
-				}
-				}
-				}
+			}
+		}
+	}
 }
