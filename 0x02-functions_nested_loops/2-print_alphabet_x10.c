@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - writes the alphabet in lowercase
+ * print_alphabet_x10 - writes the alphabet in lowercase
  *
  *
  * Return: 0
