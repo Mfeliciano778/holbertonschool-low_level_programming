@@ -9,7 +9,7 @@
  * Return: the sum of two integers (a and b)
  */
 
-int _add(int a + int b)
+int _add(int a , int b)
 {
 	int sum = a + b;
 
