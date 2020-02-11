@@ -23,7 +23,7 @@ void jack_bauer(void)
 
 				for (num4 = '0'; num4 <= '9'; num4++)
 				{
-					if (num <= '2' && num2 <= '3')
+					if ((num <= '2' && num2 <= '3') || num < '2')
 					{
 					_putchar(num);
 					_putchar(num2);
