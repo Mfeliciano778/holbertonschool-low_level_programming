@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * main - program checks to see if
+ * _isupper - program checks to see if
  * c is lowercase or uppercase.
  *
  * Return: 0
