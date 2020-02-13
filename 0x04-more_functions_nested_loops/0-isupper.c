@@ -4,7 +4,7 @@
 /**
  * _isupper - program checks to see if
  * c is lowercase or uppercase.
- *
+ * @c: variable we are checking for an upper
  * Return: 0
  */
 int _isupper(char c)
