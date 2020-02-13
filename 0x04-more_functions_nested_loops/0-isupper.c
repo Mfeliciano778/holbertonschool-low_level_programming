@@ -7,11 +7,10 @@
  *
  * Return: 0
  */
-int main(void)
+int _isupper(char c)
 {
-	char c;
 
-	if (c <= 'A' && c >= 'Z')
+	if (c <= 'Z' && c >= 'A')
 	{
 		return (1);
 	}
