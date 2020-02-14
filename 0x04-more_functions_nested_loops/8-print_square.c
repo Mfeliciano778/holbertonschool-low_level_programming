@@ -2,7 +2,8 @@
 
 /**
  * print_square - function that prints a square.
- * @size - the size of the square we're testing
+ *
+ * @size:  the size of the square we're testing
  * Return: Always 0.
  */
 void print_square(int size)
