@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_triangle - check the code for Holberton School students.
+ *
+ * @size: Size of triangle that we are testing for
  *
  * Return: Always 0.
  */
