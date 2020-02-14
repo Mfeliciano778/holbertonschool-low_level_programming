@@ -2,12 +2,13 @@
 
 /**
  * print_square - function that prints a square.
- *
+ * @size - the size of the square we're testing
  * Return: Always 0.
  */
 void print_square(int size)
 {
 	int l, w;
+
 	if (size > 0)
 	{
 		for (l = 0; l < size; l++)
