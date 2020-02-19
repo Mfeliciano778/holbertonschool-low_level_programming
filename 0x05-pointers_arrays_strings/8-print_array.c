@@ -3,8 +3,8 @@
 /**
  * print_array - Prints n elements of an array of integers
  *
- *
- *
+ * @a: pointer we are finding the integers
+ * @n: n is the number of integers we find
  *
  * Return: Always 0.
  */
