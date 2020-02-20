@@ -4,8 +4,8 @@
 /**
  * _strcmp - Function compares two strings.
  *
- *
- *
+ * @s1: pointer where the string we are comparing is.
+ * @s2: pointer where the string we are comparing is.
  *
  * Return: Always 0.
  */
