@@ -4,8 +4,9 @@
 /**
  * *_strncat - concatenates two unknown integers
  *
- *
- *
+ * @dest: pointer we are concatenating to.
+ * @src: pointer we are concatenating from.
+ * @n: amount of bytes we are concatenating.
  *
  * Return: Always 0.
  */
