@@ -4,6 +4,8 @@
 /**
  * *leet - A function that encodes a string into 1337.
  *
+ * @str: pointer we are getting the string from.
+ *
  * Return: Always 0.
  */
 char *leet(char *str)
@@ -16,7 +18,7 @@ char *leet(char *str)
 	{
 		for (j = 0; let[j]; j++)
 		{
-			if(str[i] == let[j])
+			if (str[i] == let[j])
 			{
 				str[i] = rep[j];
 			}
