@@ -4,6 +4,8 @@
 /**
  * *rot13 - function that encodes a string in rot13.
  *
+ * @str: pointer we are getting the string from.
+ *
  * Return: Always 0.
  */
 char *rot13(char *str)
