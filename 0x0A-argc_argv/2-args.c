@@ -7,21 +7,21 @@
  *
  * Return: Always 0
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-  int count;
+	int count;
 
-  if (argc > 1)
-    {
-      for (count = 1; count < argc; count++)
+	if (argc > 1)
 	{
-	  printf("%s\n", argv[count]);
+		for (count = 1; count < argc; count++)
+		{
+			printf("%s\n", argv[count]);
+		}
 	}
-    }
-  else
-    {
-      printf("%s\n", argv[0]);
-    }
+	else
+	{
+		printf("%s\n", argv[0]);
+	}
 
-  return 0;
+	return (0);
 }
