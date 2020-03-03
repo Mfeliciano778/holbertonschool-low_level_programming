@@ -20,10 +20,10 @@ char *_strdup(char *str)
 
 	clonestr = malloc(counter * sizeof(*str));
 		if (clonestr == NULL)
-			return (NULL);	
+			return (NULL);
 
 	for (counter = 0; str[counter]; counter++)
 		clonestr[counter] = str[counter];
-
+	free(clonestr);
 	return (clonestr);
 }
