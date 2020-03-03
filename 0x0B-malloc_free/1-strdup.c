@@ -19,6 +19,8 @@ char *_strdup(char *str)
 		return (NULL);
 
 	clonestr = malloc(counter * sizeof(*str));
+		if (clonestr == NULL)
+			return (NULL);	
 
 	for (counter = 0; str[counter]; counter++)
 		clonestr[counter] = str[counter];
