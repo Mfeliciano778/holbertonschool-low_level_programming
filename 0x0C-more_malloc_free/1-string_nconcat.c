@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 	else
-	{ 
+	{
 	for (counter = 0; s1[counter]; counter++)
 		total += counter;
 
