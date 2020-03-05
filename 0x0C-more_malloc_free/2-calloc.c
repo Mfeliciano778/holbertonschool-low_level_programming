@@ -1,0 +1,27 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * *_calloc - function that allocates memory for an array, using malloc
+ * @nmemb: elements of seze bytes
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	unsigned int i;
+	unsigned int *pta;
+
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+
+	pta = malloc(sizeof(nmemb) * size);
+
+	for (i = 0; i < size; i++)
+		pta[i] = nmemb;
+
+	return (pta);
+}
