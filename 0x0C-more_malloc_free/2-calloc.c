@@ -13,12 +13,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	unsigned int *pta;
+	unsigned int *pta = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
 	pta = malloc(sizeof(nmemb) * size);
+		if (pta == NULL)
+			return (NULL);
 
 	for (i = 0; i < size; i++)
 		pta[i] = nmemb;
