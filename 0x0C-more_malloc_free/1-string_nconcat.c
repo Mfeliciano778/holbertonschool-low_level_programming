@@ -12,7 +12,8 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int counter, index;
+	unsigned int counter = 0;
+	unsigned int index = 0;
 	unsigned int total = 0;
 	char *s3;
 
