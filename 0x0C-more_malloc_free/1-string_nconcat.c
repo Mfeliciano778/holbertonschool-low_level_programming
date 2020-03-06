@@ -13,30 +13,34 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int counter, index;
-	unsigned int total;
+	unsigned int total = 0;
 	char *s3;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 != NULL)
 	{
-		s1 = "";
-		s2 = "";
+		for (counter = 0; s1[counter]; counter++)
+			;
 	}
-	else
+	if (s2 != NULL)
 	{
-	for (counter = 0; s1[counter]; counter++)
-		total += counter;
+		for (index = 0; s2[index]; index++)
+			;
+	}
 
-	for (index = 0; s2[index]; index++)
-		;
+	total = counter;
 
 	if (n >= index)
 		total += index;
-	else if (n < index)
+	else
 		total += n;
-	}
-	s3 = malloc(total * sizeof(char));
+
+	s3 = malloc((total + 1) * sizeof(char));
 		if (s3 == NULL)
 			return (NULL);
+	for (counter = 0; s1[counter]; counter++)
+		s3[counter] = s1[counter];
+	for (index = 0; index < (total - counter); index++)
+		s3[counter + index] = s2[index];
 
 	return (s3);
 }
