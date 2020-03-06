@@ -12,18 +12,24 @@
  */
 char *_strdup(char *str)
 {
+	int i;
 	int counter = 0;
 	char *clonestr;
 
 	if (str == NULL)
 		return (NULL);
 
+	for (counter = 0; str[counter]; counter++)
+		;
+
 	clonestr = malloc(counter * sizeof(*str));
 		if (clonestr == NULL)
 			return (NULL);
 
-	for (counter = 0; str[counter]; counter++)
-		clonestr[counter] = str[counter];
-	free(clonestr);
+	for (i = 0; i < counter; i++)
+		clonestr[i] = str[i];
+
+	clonestr[i] = '\0';
+
 	return (clonestr);
 }
