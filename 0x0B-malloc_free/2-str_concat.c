@@ -12,24 +12,32 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *bothstrings;
-	int counter, index;
+	int counter;
+	int leng1 = 0;
+	int leng2 = 0;
 
-	for (counter = 0; s1[counter]; counter++)
-		;
+	if (s1 != NULL)
+	{
+		for (leng1 = 0; s1[leng1]; leng1++)
+			;
+	}
 
-	for (index = 0; s2[index]; index++)
-		s1[counter] = s2[index];
+	if (s2 != NULL)
+	{
+		for (leng2 = 0; s2[leng2]; leng2++)
+			;
+	}
 
-	s1[counter] = '\0';
-
-	bothstrings = malloc(sizeof(s1) + 1);
-
-		if (s1 == NULL && s2 == NULL)
+	bothstrings = malloc((leng1 + leng2 + 1) * sizeof(char));
+		if (bothstrings == NULL)
 			return (NULL);
-	else if (bothstrings == NULL)
-			return (NULL);
 
-	free(bothstrings);
+	for (counter = 0; counter < s1[counter]; counter++)
+		bothstrings[counter] = s1[counter];
 
+	for (counter = 0; counter < leng2; counter++)
+		bothstrings[counter + leng1] = s2[counter];
+
+	bothstrings[counter + leng1] = '\0';
 	return (bothstrings);
 }
