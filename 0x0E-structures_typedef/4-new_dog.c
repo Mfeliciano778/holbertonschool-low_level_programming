@@ -63,5 +63,7 @@ char *_strdup(char *str)
 	for (i = 0; i < counter; i++)
 		clonestr[i] = str[i];
 
+	clonestr[i] = '\0';
+
 	return (clonestr);
 }
