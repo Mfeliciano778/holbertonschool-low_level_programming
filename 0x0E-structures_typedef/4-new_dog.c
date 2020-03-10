@@ -17,7 +17,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *owncpy;
 
 	dog = malloc(sizeof(dog_t));
-		if(!dog)
+		if (!dog)
 			return (NULL);
 	nmecpy = _strdup(name);
 	owncpy = _strdup(owner);
@@ -35,7 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (dog);
 }
 /**
- * *_strdup - function returns a pointer to a newly allocated space in 
+ * *_strdup - function returns a pointer to a newly allocated space in
  * memory
  * @str: pointer with copy of the string given as a parameter
  *
