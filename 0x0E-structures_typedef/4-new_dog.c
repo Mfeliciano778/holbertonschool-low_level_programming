@@ -56,7 +56,7 @@ char *_strdup(char *str)
 	for (counter = 0; str[counter]; counter++)
 		;
 
-	clonestr = malloc(counter * sizeof(*str));
+	clonestr = malloc(counter * sizeof(*str) + 1);
 		if (clonestr == NULL)
 			return (NULL);
 
