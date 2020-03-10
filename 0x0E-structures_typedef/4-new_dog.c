@@ -29,9 +29,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog);
 		return (NULL);
 	}
-	dog->name = nmecpy;
+	dog->name = name;
 	dog->age = age;
-	dog->owner = owncpy;
+	dog->owner = owner;
 
 	return (dog);
 }
@@ -56,7 +56,7 @@ char *_strdup(char *str)
 	for (counter = 0; str[counter]; counter++)
 		;
 
-	clonestr = malloc(counter * sizeof(*str) + 1);
+	clonestr = malloc(counter * sizeof(char) + 1);
 		if (clonestr == NULL)
 			return (NULL);
 
