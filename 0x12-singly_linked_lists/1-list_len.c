@@ -4,10 +4,19 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_list - function that prints all the elements of a list_t list
+ * @h: pointer where the list is located
  *
  * Return: Always 0.
  */
-int main(void)
+size_t print_list(const list_t *h)
 {
+	size_t i = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
+	return (i);
 }
