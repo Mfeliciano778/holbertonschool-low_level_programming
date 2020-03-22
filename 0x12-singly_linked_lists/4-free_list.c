@@ -4,10 +4,19 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
+ * free_list - function that frees a list_t list
  *
  * Return: Always 0.
  */
-int main(void)
+void free_list(list_t *head)
 {
+	list_t *cpy;
+
+	while (head != NULL)
+	{
+		cpy = head;
+		head = head->next;
+		free(cpy->str);
+		free(cpy);
+	}
 }
