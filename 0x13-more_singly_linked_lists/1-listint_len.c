@@ -1,11 +1,13 @@
+#include "lists.h"
+/**
+ * listint_len - function returns the number of elements in a linked list
+ * @h: pointer holds the linked list
+ *
+ * Return: Always 0
+ */
+size_t listint_len(const listint_t *h)
 {
-	listint_t *new;
-
-	if (*head == NULL);
-		return (NULL);
-
-	new = malloc(sizeof(listint_t));
-		if(new == NULL)
-			return (NULL);
-	new->n = n;
-	n->next = 
+	if (!h)
+		return (0);
+	return (listint_len(h->next) + 1);
+}
