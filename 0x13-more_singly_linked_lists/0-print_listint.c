@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * print_listint - function that prints all the elements of a list_t list
+ * print_listint - print lists
+ * Description: function that prints all the elements of a list_t list
  * @h: pointer where the list is located
  *
  * Return: Always 0.
