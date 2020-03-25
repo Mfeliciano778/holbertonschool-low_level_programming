@@ -12,6 +12,6 @@ size_t print_listint(const listint_t *h)
 		return (0);
 
 	printf("%i\n", h->n);
-	
+
 	return (print_listint(h->next) + 1);
 }
