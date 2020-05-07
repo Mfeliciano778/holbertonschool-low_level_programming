@@ -7,7 +7,7 @@
  * @c: variable we are checking for an upper
  * Return: 0
  */
-int _isupper(char c)
+int _isupper(int c)
 {
 
 	if (c <= 'Z' && c >= 'A')
