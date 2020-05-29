@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int slot;
 	hash_node_t *entry, *new_node;
-	
+
 	if (key == NULL || ht == NULL || value == NULL)
 		return (0);
 
@@ -21,7 +21,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	entry = ht->array[slot];
 		if (entry == NULL)
 			return (0);
-	while(entry)
+	while (entry)
 	{
 		if (strcmp(entry->key, key) == 0)
 		{
