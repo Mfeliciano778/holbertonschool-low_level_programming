@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * sum_dlistint -
+ * sum_dlistint - Function adds up the data inside a doubly linked list
+ * @head: pointer to the doubly linked list
  *
- * Return: 
+ * Return: the sum of all data
  */
 int sum_dlistint(dlistint_t *head)
 {
