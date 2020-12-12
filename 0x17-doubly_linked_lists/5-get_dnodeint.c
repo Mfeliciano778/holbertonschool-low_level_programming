@@ -5,7 +5,7 @@
  * @head: pointer to the doubly linked list
  * @index: where the node we reutrn is
  *
- * Return: data inside the node, or NULL if it failed
+ * Return: address to the node, or NULL if it failed
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
