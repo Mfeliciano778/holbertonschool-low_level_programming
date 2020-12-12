@@ -15,7 +15,6 @@ int sum_dlistint(dlistint_t *head)
 	{
 		sum += curr->n;
 		curr = curr->next;
-		printf("%i\n", sum);
 	}
 	return (sum);
 }
