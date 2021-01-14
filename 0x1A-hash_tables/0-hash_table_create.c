@@ -13,9 +13,17 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/* allocate table*/
 	new_hash = malloc(sizeof(hash_table_t) * 1);
+	if (!new_hash)
+	{
+		return (NULL);
+	}
 
 	/* allocate table entries*/
 	new_hash->array = malloc(sizeof(hash_node_t) * size);
+	if (!new_hash->array)
+	{
+		return (NULL);
+	}
 
 	/*set each entry to null*/
 	for (index = 0; index < size; index++)
