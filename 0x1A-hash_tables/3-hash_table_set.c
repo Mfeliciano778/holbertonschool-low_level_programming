@@ -18,23 +18,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	bucket = key_index((const unsigned char *) key, ht->size);
 	entry = ht->array[bucket];
 
-	/*index through entry until the end is reached or a match is found*/
 	while (entry != NULL)
 	{
-		/*check key*/
 		if (strcmp(entry->key, key) == 0)
 		{
-			/*match found, replace value*/
 			free(entry->value);
 			entry->value = strdup(value);
 			if (entry->value == NULL)
 				return (0);
 			return (1);
 		}
-		/*move to the next entry*/
 		entry = entry->next;
 	}
-	/*got to the end and adding a new entry*/
 	new_bucket = malloc(sizeof(hash_node_t));
 	if (!new_bucket)
 		return (0);
@@ -50,7 +45,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_bucket = ht->array[bucket];
 		ht->array[bucket] = new_bucket;
 	}
-	return (1);
-	
 	return (1);
 }
