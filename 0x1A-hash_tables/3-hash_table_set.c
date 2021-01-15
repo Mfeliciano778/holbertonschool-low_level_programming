@@ -42,8 +42,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[bucket] = new_bucket;
 	else
 	{
-		new_bucket = ht->array[bucket];
-		ht->array[bucket] = new_bucket;
+		new_bucket = (ht->array)[bucket];
+		(ht->array)[bucket] = new_bucket;
 	}
 	return (1);
 }
