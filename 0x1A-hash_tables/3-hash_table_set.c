@@ -31,15 +31,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		entry = entry->next;
 	}
 	new_bucket = malloc(sizeof(hash_node_t));
-	if (!new_bucket)
+	if (new_bucket == NULL)
 		return (0);
 	new_bucket->value = strdup(value);
-	if (!new_bucket->value && value != NULL)
+	if (new_bucket->value == NULL && value != NULL)
 		return (0);
 	new_bucket->key = strdup(key);
 	new_bucket->next = NULL;
 	if (ht->array[bucket] == NULL)
+	{
 		ht->array[bucket] = new_bucket;
+	}
 	else
 	{
 		new_bucket = (ht->array)[bucket];
