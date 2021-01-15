@@ -20,7 +20,7 @@ void hash_table_print(const hash_table_t *ht)
 			if (entry)
 			{
 				printf("'%s': '%s'", entry->key, entry->value);
-				while(entry->next)
+				while (entry->next)
 				{
 					entry = entry->next;
 					printf("'%s': '%s'", entry->key, entry->value);
