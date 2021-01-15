@@ -21,10 +21,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/*check if index is already there and set it if not*/
 	if (!entry)
 	{
-		if (ht_pair(key, value))
-			ht->array[bucket] = ht_pair(key, value);
-			return (1);
-		return (0);
+		ht->array[bucket] = ht_pair(key, value);
+		return (1);
 	}
 	/*index through entry until the end is reached or a match is found*/
 	while (entry != NULL)
@@ -35,8 +33,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			/*match found, replace value*/
 			free(entry->value);
 			entry->value = malloc(strlen(value) + 1);
-			if (!entry->value)
-				return (0);
 			strcpy(entry->value, value);
 			return (1);
 		}
@@ -45,8 +41,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		entry = prev->next;
 	}
 	/*got to the end and adding a new entry*/
-	if (ht_pair(key, value))
-		prev->next = ht_pair(key, value);
+	prev->next = ht_pair(key, value);
 	return (1);
 }
 
@@ -66,15 +61,7 @@ hash_node_t *ht_pair(const char *key, const char *value)
 		return (NULL);
 	}
 	entry->key = malloc(strlen(key) + 1);
-	if (entry->key != NULL)
-	{
-		return (NULL);
-	}
 	entry->value = malloc(strlen(value) + 1);
-	if (entry->value != NULL)
-	{
-		return (NULL);
-	}
 	strcpy(entry->key, key);
 	strcpy(entry->value, value);
 	entry->next = NULL;
