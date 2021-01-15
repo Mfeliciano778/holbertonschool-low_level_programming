@@ -1,9 +1,11 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_get -
+ * hash_table_get - returns the buckets of the hashtable
+ * @ht: pointer to the hashtable
+ * @key: the key we are looking for
  *
- * Return: 
+ * Return: the value if successful, NULL otherwise
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
