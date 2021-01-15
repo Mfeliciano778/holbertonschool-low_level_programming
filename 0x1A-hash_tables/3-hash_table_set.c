@@ -1,9 +1,12 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set -
+ * hash_table_set - sets the hashtable with key/value pairs
+ * @ht: pointer to the hashtable
+ * @key: key we are setting
+ * @value: value we are setting
  *
- * Return: 
+ * Return: 0 if fail, 1 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -25,7 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	while (entry != NULL)
 	{
 		/*check key*/
-		if(strcmp(entry->key, key) == 0)
+		if (strcmp(entry->key, key) == 0)
 		{
 			/*match found, replace value*/
 			free(entry->value);
@@ -43,14 +46,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * ht_pair - pairs the 
- * 
- * 
- * Return:
+ * ht_pair - pairs the key and the value
+ * @key: the key
+ * @value: the value
+ *
+ * Return: the node paired, NULL if failed
  */
 hash_node_t *ht_pair(const char *key, const char *value)
 {
 	hash_node_t *entry = malloc(sizeof(hash_node_t) * 1);
+
 	if (!entry)
 	{
 		return (NULL);
