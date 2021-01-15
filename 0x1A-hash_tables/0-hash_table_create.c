@@ -9,22 +9,22 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_hash;
-	unsigned int index;
+	unsigned long int index;
 
 	/* allocate table*/
-	new_hash = malloc(sizeof(hash_table_t) * 1);
+	new_hash = malloc(sizeof(hash_table_t));
 	if (!new_hash)
 	{
 		return (NULL);
 	}
 
 	/* allocate table entries*/
-	new_hash->array = malloc(sizeof(hash_node_t) * size);
+	new_hash->array = malloc(sizeof(hash_node_t *) * size);
 	if (!new_hash->array)
 	{
 		return (NULL);
 	}
-
+	new_hash->size = size;
 	/*set each entry to null*/
 	for (index = 0; index < size; index++)
 	{
