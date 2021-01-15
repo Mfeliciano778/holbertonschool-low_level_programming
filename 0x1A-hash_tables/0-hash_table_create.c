@@ -25,6 +25,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 	new_hash->size = size;
+	if (size == 0)
+		return (NULL);
 	/*set each entry to null*/
 	for (index = 0; index < size; index++)
 	{
