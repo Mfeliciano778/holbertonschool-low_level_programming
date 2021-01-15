@@ -12,7 +12,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int index;
 
 	/* allocate table*/
-	new_hash = malloc(sizeof(hash_table_t));
+	new_hash = (hash_table_t *) malloc(sizeof(hash_table_t));
 	if (!new_hash)
 	{
 		return (NULL);
