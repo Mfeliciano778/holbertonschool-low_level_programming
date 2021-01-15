@@ -34,7 +34,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!new_bucket)
 		return (0);
 	new_bucket->value = strdup(value);
-	if (!new_bucket->value)
+	if (!new_bucket->value && value != NULL)
 		return (0);
 	new_bucket->key = strdup(key);
 	new_bucket->next = NULL;
