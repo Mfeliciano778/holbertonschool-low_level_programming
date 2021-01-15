@@ -35,7 +35,6 @@ typedef struct hash_table_s
 } hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);
-hash_node_t *ht_pair(const char *key, const char *value);
 void free_all(hash_node_t *bucket);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);

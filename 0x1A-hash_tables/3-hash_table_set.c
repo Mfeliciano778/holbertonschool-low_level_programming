@@ -11,19 +11,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int bucket;
-	hash_node_t *entry, *prev;
+	hash_node_t *entry, *new_bucket;
 
 	if (key == NULL || ht == NULL || value == NULL || !(*key))
 		return (0);
-
 	bucket = key_index((const unsigned char *) key, ht->size);
 	entry = ht->array[bucket];
-	/*check if index is already there and set it if not*/
-	if (!entry)
-	{
-		ht->array[bucket] = ht_pair(key, value);
-		return (1);
-	}
+
 	/*index through entry until the end is reached or a match is found*/
 	while (entry != NULL)
 	{
@@ -32,39 +26,31 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			/*match found, replace value*/
 			free(entry->value);
-			entry->value = malloc(strlen(value) + 1);
-			strcpy(entry->value, value);
+			entry->value = strdup(value);
+			if (entry->value == NULL)
+				return (0);
 			return (1);
 		}
 		/*move to the next entry*/
-		prev = entry;
-		entry = prev->next;
+		entry = entry->next;
 	}
 	/*got to the end and adding a new entry*/
-	prev->next = ht_pair(key, value);
-	return (1);
-}
-
-/**
- * ht_pair - pairs the key and the value
- * @key: the key
- * @value: the value
- *
- * Return: the node paired, NULL if failed
- */
-hash_node_t *ht_pair(const char *key, const char *value)
-{
-	hash_node_t *entry = malloc(sizeof(hash_node_t) * 1);
-
-	if (!entry)
+	new_bucket = malloc(sizeof(hash_node_t));
+	if (!new_bucket)
+		return (0);
+	new_bucket->value = strdup(value);
+	if (!new_bucket->value)
+		return (0);
+	new_bucket->key = strdup(key);
+	new_bucket->next = NULL;
+	if (ht->array[bucket] == NULL)
+		ht->array[bucket] = new_bucket;
+	else
 	{
-		return (NULL);
+		new_bucket = ht->array[bucket];
+		ht->array[bucket] = new_bucket;
 	}
-	entry->key = malloc(strlen(key) + 1);
-	entry->value = malloc(strlen(value) + 1);
-	strcpy(entry->key, key);
-	strcpy(entry->value, value);
-	entry->next = NULL;
-
-	return (entry);
+	return (1);
+	
+	return (1);
 }
