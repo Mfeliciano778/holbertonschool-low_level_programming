@@ -11,7 +11,7 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	return (real_binary(array, 0, size, value));
+	return (real_binary(array, 0, size - 1, value));
 }
 /**
  * binary_search - function searches for a value in an array
@@ -23,25 +23,26 @@ int binary_search(int *array, size_t size, int value)
  */
 int real_binary(int *array, size_t left, size_t right, int value)
 {
-	size_t indx;
+	size_t indx, loop;
 
 	if (left > right)
 		return (-1);
 
 	printf("Searching in array: ");
-	for (indx = 0; indx < right; indx++)
+	for (loop = left; loop <= right; loop++)
 	{
-		if (indx != (right - 1))
-			printf("%i, ", array[indx]);
+		if (loop != (right))
+			printf("%i, ", array[loop]);
 		else
-			printf("%d\n", array[indx]);
+			printf("%i\n", array[loop]);
 	}
 
 	indx = left + (right - left) / 2;
 
 	if (array[indx] == value)
+	{
 		return (indx);
-
+	}
 	else if (array[indx] > value)
 	{
 		if (indx != 0)
