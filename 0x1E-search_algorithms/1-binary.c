@@ -14,7 +14,7 @@ int binary_search(int *array, size_t size, int value)
 	return (real_binary(array, 0, size - 1, value));
 }
 /**
- * binary_search - function searches for a value in an array
+ * real_binary - function searches for a value in an array
  * @array: array
  * @left: size of left array
  * @right: size of right array
